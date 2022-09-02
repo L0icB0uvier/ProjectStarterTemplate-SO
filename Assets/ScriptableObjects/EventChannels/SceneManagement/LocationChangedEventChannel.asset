@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f0f050e903343cbbcfef35961b70d89, type: 3}
-  m_Name: SceneReady
+  m_Script: {fileID: 11500000, guid: 57f1ec5d6fa436a46889e1af99ba44c1, type: 3}
+  m_Name: LocationChangedEventChannel
   m_EditorClassIdentifier: 
