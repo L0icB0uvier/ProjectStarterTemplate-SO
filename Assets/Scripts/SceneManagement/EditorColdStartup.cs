@@ -24,15 +24,10 @@ namespace SceneManagement
 		private bool _isColdStart;
 		private void Awake()
 		{
-			if (SceneManager.GetSceneByName(_persistentManagersSO.sceneReference.editorAsset.name).isLoaded)
+			if (!SceneManager.GetSceneByName(_persistentManagersSO.sceneReference.editorAsset.name).isLoaded)
 			{
-				_notifyColdStartupChannel.LoadAssetAsync<LoadEventChannel>().Completed += OnNotifyChannelLoaded;
-				return;
+				_isColdStart = true;
 			}
-			
-			_isColdStart = true;
-			
-			_locationChangedChannel.RaiseEvent(_thisSceneSO as LocationSO);
 		}
 
 		private void Start()
